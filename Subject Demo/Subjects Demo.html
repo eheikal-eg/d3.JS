@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+<script src="./Engines/HorizontalBarChartEngine.js"></script>
+
+<body>
+    <div class="chart" style="border: 3px solid; height: 550px;">
+
+    </div>
+    <script>
+        let data = 
+        [
+            {"Label": "Eslam" , "ValueItem1" : 40 , "ValueItem2": 50},
+            {"Label": "Ahmed" , "ValueItem1" : 50 , "ValueItem2": 0},
+            {"Label": "Eyad" , "ValueItem1" : 30 , "ValueItem2": 70},
+            {"Label": "Malek" , "ValueItem1" : 20 , "ValueItem2": 20},
+            {"Label": "Amir" , "ValueItem1" : 60 , "ValueItem2": 30},
+            {"Label": "Mohamed" , "ValueItem1" : 70 , "ValueItem2": 75},
+            {"Label": "Mostafa" , "ValueItem1" : 60 , "ValueItem2": 50.5},
+            {"Label": "Waleed" , "ValueItem1" : 75 , "ValueItem2": 55},
+            {"Label": "Samir" , "ValueItem1" : 10 , "ValueItem2": 0},
+            {"Label": "Hatem" , "ValueItem1" : 35 , "ValueItem2": 10},
+            {"Label": "Mahmoud" , "ValueItem1" : 25 , "ValueItem2": 30},
+        ];
+        let color = ['red' , 'blue'];
+        let legend = ['Arabic' , 'English' ];
+        DrawHorizontalBarChart({
+            divClassName: "chart",
+            height: 700,
+            NumberOfSlice: 2,
+            xScaleMaxNumber: 80,
+            dataSet: data,
+            colors: color,
+            dataLegend: legend,
+            legendTitle: 'Subjects: ',
+            ShowXScale: true,
+            ShowYScale: true,
+            ShowLabels: true
+        });
+    </script>    
+</body>
+</html>
